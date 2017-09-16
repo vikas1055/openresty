@@ -22,8 +22,7 @@ exec  {"untar-pcre":
         provider => 'shell',
         path => [ "/bin", "/usr/bin" ],
         require => [File [ "/opt/pcre-8.41.tar.gz"] ],
-        unless  => "find /usr/local/ | grep pcre-8.41",
-      }
+        }
 ->
 ## Now openresty Installation Start
 file 	 { "/opt/openresty-1.11.2.5.tar.gz":
