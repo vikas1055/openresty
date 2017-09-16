@@ -18,10 +18,10 @@
 # Check that networking is up.
 [ "$NETWORKING" = "no" ] && exit 0
 
-nginx="/usr/local/sbin/nginx"
+nginx="/usr/local/openresty/nginx/sbin/nginx"
 prog=$(basename $nginx)
 
-NGINX_CONF_FILE="/etc/nginx/nginx.conf"
+NGINX_CONF_FILE="/usr/local/openresty/nginx/conf/nginx.conf"
 
 lockfile=/var/run/lock/subsys/nginx
 
